@@ -67,11 +67,11 @@ JavaScript හි හැකියාවන් එය ක්‍රියාත්
 
     නවීන බ්‍රව්සර් එයට ලිපිගොනු සමඟ වැඩ කිරීමට ඉඩ දෙයි, නමුත් ප්‍රවේශය සීමිත වන අතර පරිශීලකයා බ්‍රවුසර කවුළුවකට ගොනුවක් "අතහැර දැමීම" හෝ `<input>` ටැගයක් හරහා තෝරා ගැනීම වැනි යම් යම් ක්‍රියා සිදු කරන්නේ නම් පමණි.
 
-    කැමරාව / මයික්‍රොෆෝනය සහ වෙනත් උපාංග සමඟ අන්තර් ක්‍රියා කිරීමට ක්‍රම තිබේ, නමුත් ඒවාට පරිශීලකයාගේ පැහැදිලි අවසරය අවශ්‍ය වේ. එබැවින්JavaScript  සක්‍රීය කළ පිටුවක් වෙබ් කැමරාවක් හොර රහසේ සක්‍රිය කිරීමට, වටපිටාව නිරීක්ෂණය කිරීමට සහ තොරතුරු [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) වෙත යැවිය නොහැක.
+    කැමරාව / මයික්‍රොෆෝනය සහ වෙනත් උපාංග සමඟ අන්තර් ක්‍රියා කිරීමට ක්‍රම තිබේ, නමුත් ඒවාට පරිශීලකයාගේ පැහැදිලි අවසරය අවශ්‍ය වේ. එබැවින් JavaScript  සක්‍රීය කළ පිටුවක් වෙබ් කැමරාවක් හොර රහසේ සක්‍රිය කිරීමට, වටපිටාව නිරීක්ෂණය කිරීමට සහ තොරතුරු [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) වෙත යැවිය නොහැක.
     
-- විවිධ ටැබ් / කවුළු සාමාන්‍යයෙන් එකිනෙකා ගැන නොදනී. සමහර විට ඒවා සිදු වේ, උදාහරණයක් ලෙස එක් කවුළුවක් අනෙක් කවුළුව විවෘත කිරීමට ජාවාස්ක්‍රිප්ට් භාවිතා කරන විට. නමුත් මෙම අවස්ථාවෙහිදී පවා, එක් පිටුවක ඇති ජාවාස්ක්‍රිප්ට් විවිධ වෙබ් අඩවි වලින් (වෙනත් domain එකක්  ,protocol එකක්  හෝ port එකක් හරහා ) පැමිණෙන්නේ නම් අනෙක් පිටුවට පිවිසිය නොහැක.
+- විවිධ ටැබ් / කවුළු සාමාන්‍යයෙන් එකිනෙකා ගැන නොදනී. සමහර විට ඒවා සිදු වේ, උදාහරණයක් ලෙස එක් කවුළුවක් අනෙක් කවුළුව විවෘත කිරීමට ජාවාස්ක්‍රිප්ට් භාවිතා කරන විට. නමුත් මෙම අවස්ථාවෙහිදී පවා, එක් පිටුවක ඇති ජාවාස්ක්‍රිප්ට් විවිධ වෙබ් අඩවි වලින් (වෙනත් domain එකක්, protocol එකක්  හෝ port එකක් හරහා) පැමිණෙන්නේ නම් අනෙක් පිටුවට පිවිසිය නොහැක.
 
-    මෙය "Same Origin Policy" ලෙස හැඳින්වේ. එසේ  වැඩ කිරීමට, පිටු දෙකම දත්ත හුවමාරුව සඳහා එකඟ විය යුතු අතර එය හසුරුවන විශේෂJavaScript  කේතයක් අඩංගු විය යුතුය. අපි එය නිබන්ධනයෙන් ආවරණය කරමු.
+    මෙය "Same Origin Policy" ලෙස හැඳින්වේ. එසේ  වැඩ කිරීමට, පිටු දෙකම දත්ත හුවමාරුව සඳහා එකඟ විය යුතු අතර එය හසුරුවන විශේෂ JavaScript  කේතයක් අඩංගු විය යුතුය. අපි එය නිබන්ධනයෙන් ආවරණය කරමු.
     
     මෙම සීමාව නැවතත්, පරිශීලකයාගේ ආරක්ෂාව සඳහා වේ. පරිශීලකයෙකු විවෘත කර ඇති http://anysite.com හි පිටුවකට http://gmail.com URL සමඟ වෙනත් බ්‍රව්සර්ටැබ් එකකට ප්‍රවේශ විය නොහැකි අතර එතැන් සිට තොරතුරු සොරකම් කළ නොහැකි විය යුතුය.
 
@@ -80,44 +80,53 @@ JavaScript හි හැකියාවන් එය ක්‍රියාත්
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+JavaScript බ්‍රව්සරයෙන් පිටත භාවිතා කරන්නේ නම්  උදාහරණයක් ලෙස සේවාදායකයක එවැනි සීමාවන් නොපවතී. නවීන බ්‍රව්සර් මඟින් plugin/extensions සඳහා ඉඩ ලබා දේ.
 
-## What makes JavaScript unique?
+## JavaScript වල අද්විතීය වන්නේ කුමක් ද?
 
-There are at least *three* great things about JavaScript:
+JavaScript ගැන අවම වශයෙන් විශිෂ්ට කරුණු තුනක් වත් තිබේ:
 
-```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Support by all major browsers and enabled by default.
-```
-JavaScript is the only browser technology that combines these three things.
+    + HTML / CSS සමඟ පූර්ණ එකතු කල හකිවීම.
+    + සරල දේවල් සරලව සිදුකිරිම 
+    + සියලුම ප්‍රධාන බ්‍රව්සර් මගින් ක්‍රියාකළ හකිවීම සහ by default  සක්‍රීය කර තිබීම.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
+මෙම කරුණු තුන ඒකාබද්ධ කරන එකම බ්‍රව්සර් තාක්ෂණයJavaScript ය.
 
-That said, JavaScript also allows to create servers, mobile applications, etc.
+JavaScript අද්විතීය වන්නේඑමනිසයි. බ්‍රව්සර් අතුරුමුහුණත් නිර්මාණය කිරීම සඳහා එය වඩාත්ම  පුළුල් මෙවලම වන්නේ එබැවිනි.
 
-## Languages "over" JavaScript
+ජාවාස්ක්‍රිප්ට් මඟින් සේවාදායකයන්, ජංගම යෙදුම් ආදිය නිර්මාණය කිරීමටද ඉඩ ලබා දේ.
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+## JavaScript හා අනෙකුත් භාෂා
 
-That's to be expected, because projects and requirements are different for everyone.
+JavaScript හි syntax  සෑම කෙනෙකුගේම අවශ්‍යතාවන්ට ගැලපෙන්නේ නැත. විවිධ පුද්ගලයින්ට විවිධfeatures  අවශ්‍ය වේ.
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+ව්‍යාපෘති සහ අවශ්‍යතා සෑම කෙනෙකුටම වෙනස් වන නිසා එය අපේක්ෂා කළ යුතුය.
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
+මෑතකදී බ්‍රව්සරයේ ක්‍රියාත්මක වීමට පෙරJavaScript  වෙත transpile කරන ලද (පරිවර්තනය කරන ලද) නව භාෂාවන් රාශියක් ඉදිරිපත් විය.
 
-Examples of such languages:
+නවීන මෙවලම් මගින් traspilation  ඉතා වේගවත් හා විනිවිද පෙනෙන බවකට  පත් කරයි, ඇත්ත වශයෙන්ම සංවර්ධකයින්ට වෙනත් භාෂාවකින් කේත කිරීමට ඉඩ දී එය ස්වයංක්‍රීයව පරිවර්තනය කරයි.
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+එවැනි භාෂාවල උදාහරණ:
 
-There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
+ - CoffeeScript  යනු JavaScript සඳහා “Syntactic sugar ” එකකි. එය කෙටි
+   වාක්‍ය ඛණ්ඩයක් හඳුන්වා දෙන අතර වඩාත් පැහැදිලි හා වඩාත් නිවැරදි කේත
+   ලිවීමට අපට ඉඩ සලසයි. සාමාන්යයෙන් Ruby සන්වර්ධකයින්  එයට ප්‍රිය කරයි.
+ - TypeScript  සංකේන්ද්‍රණය වී ඇත්තේ සංකීර්ණ පද්ධතිවල development
+   සහsupport සරල කිරීම සඳහා “strict data typing” එකතු කිරීම මත ය. එය
+   සංවර්ධනය කර ඇත්තේ Microsoft  විසිනි.
+ - Flow ද data typing  වෙනත් ආකාරයකින්එ ක් කරයි. Facebook විසින්  සංවර්ධනය කරන ලදි.
+ - Dart යනු බ්‍රව්සර් නොවන environment එකක  (ජංගම යෙදුම් වැනි) ධාවනය වන
+   තමන්ගේම එන්ජිමක් ඇති ස්වාධීන භාෂාවක් වන අතර එය JavaScript වෙත transpile
+   කළ හැකිය.Google  විසින්  සංවර්ධනය කරන ලදි.
 
-## Summary
+තවත් බොහෝ දේ ඇත. ඇත්ත වශයෙන්ම, transpile කළ භාෂාවක් භාවිතා කළද, අප කරන්නේ කුමක්ද යන්න සැබවින්ම තේරුම් ගැනීමටනම් JavaScript  දැන සිටිය යුතුය.
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+## සාරාංශය
+
+ - JavaScript මුලින් බ්රවුසරයට පමණක් සීමා වූ භාෂාවක් ලෙස නිර්මාණය කරන ලද
+   නමුත් දැන් එය වෙනත් බොහෝ environment වලද භාවිතා වේ.
+ - අද, JavaScript  HTML / CSS සමඟ පූර්ණ ලෙස ඒකාබද්ධ වී වඩාත් පුළුල් ලෙස
+   භාවිතා කරන බ්‍රව්සර් භාෂාව ලෙස සුවිශේෂී ස්ථානයක් ලබා ඇත.
+ - JavaScript  වෙත "transpile" වන සහ සමහර විශේෂාංග සපයන බොහෝ භාෂා ඇත.
+   JavaScript ප්‍රගුණ කිරීමෙන් පසු අවම වශයෙන් කෙටියෙන් හෝ ඒවා හැදෑරීම 
+   කල යතුයි.
