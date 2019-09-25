@@ -1,120 +1,130 @@
-# An Introduction to JavaScript
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+# JavaScript පිළිබඳව හැඳින්වීමක්
 
-## What is JavaScript?
+අපි JavaScript හි ඇති විශේෂත්වය කුමක්ද, එය සමඟ අපට අත් කරගත හැකි දේ කුමක්ද සහ  එය සමඟ හොඳින් ක්‍රියා කරන වෙනත් තාක්ෂණයන් මොනවාද යන්න සොයා බලමු .
 
-*JavaScript* was initially created to *"make web pages alive"*.
+ ## JavaScript යනු කුමක්ද?
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+*JavaScript* මුලින් නිර්මාණය කරන ලද්දේ  *“වෙබ් පිටු සජීවී කිරීමට”* යන තේමාවෙන්ය.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+මෙම භාෂාවේ වැඩසටහන් *scripts* ලෙස හැඳින්වේ. ඒවා HTML වෙබ් පිටුවක ලිවිය හැකි අතර පිටුව load  වනවිට ස්වයංක්‍රීයව run වේ.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+මෙම වැඩසටහන් code කරනු ලබන්නේ  සහ execute වෙනු ලබන්නේ plain text ලෙසය. Run  කිරීමට  විශේෂ සූදානමක් හෝ compile කිරීමක්  අවශ්‍ය නොවේ.
 
-```smart header="Why <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+මේ අනුව බලන කල  JavaScript භාෂාව [Java](%28https://en.wikipedia.org/wiki/Java_%20%28program_language%29%29)  යනුවෙන් හැඳින්වෙන භාෂාවට  වඩා බෙහෙවින් වෙනස්ය.
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
-```
+    JavaScript  නිර්මාණය කරන විට එයට මුලින් "LiveScript" යනුවෙන්  තවත් නමක් තිබුණි. නමුත් Java  එකල ඉතා ජනප්‍රිය වූ බැවින් මෙම නව භාෂාව Java  භාෂාවේ "බාල සහෝදරයෙකු" ලෙස ස්ථානගත කිරීම උපකාරී වනු ඇතැයි තීරණය විය.
+        
+    නමුත් එය පරිණාමය වන විට, ජාවාස්ක්‍රිප්ට් [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript) නමින් හැඳින්වෙන සම්පූර්ණ ස්වාධීන භාෂාවක් බවට පත් වූ අතර දැන් එයට Java  සමඟ කිසිදු සම්බන්ධයක් නොමැත.
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+අද වන විට JavaScript  බ්‍රව්සර වල පමණක් නොව, Servers වල වුවද, ඇත්ත වශයෙන්ම [JavaScript Engine](https://en.wikipedia.org/wiki/JavaScript_engine)  නමින් හැදින්වෙන විශේෂ වැඩසටහනක් ඇති ඕනෑම උපාංගයක run  කළ හැකිය.
 
-Different engines have different "codenames". For example:
+බ්‍රව්සරවල  කාවැද්දූ එන්ජිමක් ඇත, සමහර විට එය "JavaScript virtual machine" ලෙස හැඳින්වේ.
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+විවිධ එන්ජින්වල විවිධ "කේත නාම" ඇත. උදාහරණයක් වශයෙන්:
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+ - [V8](https://en.wikipedia.org/wiki/V8_%20%28JavaScript_engine%29)  -  Chrome  සහ Opera වල.
+ - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) - Firefox වල.
+ - ... IE හි විවිධ සංස්කරණ සඳහා "Trident" සහ  "Chakra", Microsoft Edge
+   සඳහා,  "ChakraCore", Safari සඳහා "Nitro" සහ "SquirrelFish" වැනි වෙනත්
+   කේත නාම තිබේ.
 
-```smart header="How do engines work?"
+ඉහත යෙදුම් අන්තර්ජාලයේ developer articles  වල භාවිතා වන බැවින්  මතක තබා ගැනීම හොඳය. අපිද  ඒවා පාවිච්චි කරමු. උදාහරණයක් ලෙස, X නම් විශේෂාංගයක් V8 මඟින් සහය දක්වයි යනුවෙන් තිබේනම් නම්, එය බොහෝ විට Chrome  සහ Opera වල ක්‍රියා කරයි.
 
-Engines are complicated. But the basics are easy.
+    එන්ජින් සංකීර්ණයි. නමුත් මූලික කරුණු පහසුය.
+    
+    1. එන්ජිම (එය බ්‍රව්සරයක් නම් කාවැදී ඇත) scripts කියවයි ("parses").
+    2. ඉන්පසු එය scripts යන්ත්‍ර භාෂාවට පරිවර්තනය කරයි ("compile").
+    3. ඉන්පසු යන්ත්‍ර කේතය ඉතා වේගයෙන් run වේ.
+    
+    මෙම ක්‍රියාවලියේ සෑම පියවරකදීම එන්ජිම විසින්  කේතය Optimize කරනු ලබයි. එය compile  කරන ලද script එක run වන විට පවා ඒවා නරඹා, එය හරහා ගලා යන දත්ත විශ්ලේෂණය කර, එම දැනුම මත පදනම්ව යන්ත්‍ර කේතය Optimize කරනු ලබයි. අවසානයේ script එක ඉතා වේගයෙන් run වේ.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and applies optimizations to the machine code based on that knowledge. When it's done, scripts run quite fast.
-```
+## බ්‍රව්සරයේ run වන JavaScrpt වැඩසටහනකටකුමක් කළ හැකිද?
 
-## What can in-browser JavaScript do?
+නූතන JavaScript  යනු “safe ” ක්‍රමලේඛන භාෂාවකි. එය මුලින් නිර්මාණය කරන ලද්දේ බ්‍රව්සර සඳහා සහ ඒ සඳහා  memory  හෝ CPU වලට low-level ප්‍රවේශයක් අවශ්‍ය නොවන බැවින් එසේ සපයන්නේ නැත. 
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+JavaScript හි හැකියාවන් එය ක්‍රියාත්මක වන environment එක  මත බොහෝ සෙයින් රඳා පවතී. උදාහරණයක් ලෙස, ලිපිගොනු  කියවීමට / ලිවීමට, ජාල ඉල්ලීම් ඉටු කිරීමට  Node.js සහාය දක්වයි.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+බ්‍රව්සරයේ run  වෙන JavaScript වැඩසටහනකට  වෙබ් පිටු හැසිරවීම, පරිශීලකයා සමඟ අන්තර්ක්‍රියා කිරීම සහ වෙබ් සේවාදායකය (web server) සම්බන්ධ සෑම දෙයක්ම කළ හැකිය.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+උදාහරණයක් ලෙස බ්‍රව්සරයේ run  වෙන JavaScript වැඩසටහනකට:
 
-For instance, in-browser JavaScript is able to:
+- පිටුවට නව HTML එක් කිරීම, පවතින අන්තර්ගතය වෙනස් කිරීම, styles  වෙනස් කිරීම කලහැක.
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- පරිශීලක ක්‍රියාවන්ට ප්‍රතික්‍රියා කිරීම, මූසික ක්ලික් කිරීම, දර්ශක චලනයන්, යතුරු එබීම් මත ධාවනය කිරීම කලහැක.
 
-## What CAN'T in-browser JavaScript do?
+- දුරස්ථ සේවාදායකයන් වෙත ජාලය හරහා ඉල්ලීම් යැවීම් , ගොනු බාගත කිරීම  උඩුගත කිරීම  ( [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) සහ [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) තාක්ෂණයන්).
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+- cookies ලබාගෙන සැකසීම, නරඹන්නාගෙන් ප්‍රශ්නඇසීම, පණිවිඩ පෙන්වීම කල හැක.
 
-Examples of such restrictions include:
+- සේවාදායකයාගේ පැත්තේ ඇති දත්ත මතක තබා ගැනීම කලහැක  ("local storage").
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS system functions.
+## බ්‍රව්සරයේ run වන JavaScrpt වැඩසටහනකට කුමක් කළ නොහැකිද?
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+පරිශීලකයාගේ ආරක්ෂාව සඳහා බ්‍රව්සරයේ run  වන JavaScrpt වැඩසටහනක හැකියාවන් සීමිතය. නපුරු වෙබ් පිටුවක් පුද්ගලික තොරතුරු වෙත ප්‍රවේශ වීම හෝ පරිශීලකයාගේ දත්ත වලට හානි කිරීම වැළැක්වීම මෙහි අරමුණයි.
 
-    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+එවැනි සීමාවන්ට උදාහරණ ලෙස:
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
+- වෙබ් පිටුවකට දෘඩ තැටියේ අත්තනෝමතික ලිපිගොනු කියවීම / ලිවීම, ඒවා පිටපත් කිරීම හෝ වැඩසටහන් ක්‍රියාත්මක කිරීම නොකළ හැකිය. එයට OS පද්ධති ක්‍රියාකාරිත්වයට access නොමැත.
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+    නවීන බ්‍රව්සර් එයට ලිපිගොනු සමඟ වැඩ කිරීමට ඉඩ දෙයි, නමුත් ප්‍රවේශය සීමිත වන අතර පරිශීලකයා බ්‍රවුසර කවුළුවකට ගොනුවක් "අතහැර දැමීම" හෝ `<input>` ටැගයක් හරහා තෝරා ගැනීම වැනි යම් යම් ක්‍රියා සිදු කරන්නේ නම් පමණි.
+
+    කැමරාව / මයික්‍රොෆෝනය සහ වෙනත් උපාංග සමඟ අන්තර් ක්‍රියා කිරීමට ක්‍රම තිබේ, නමුත් ඒවාට පරිශීලකයාගේ පැහැදිලි අවසරය අවශ්‍ය වේ. එබැවින් JavaScript  සක්‍රීය කළ පිටුවක් වෙබ් කැමරාවක් හොර රහසේ සක්‍රිය කිරීමට, වටපිටාව නිරීක්ෂණය කිරීමට සහ තොරතුරු [NSA](https://en.wikipedia.org/wiki/National_Security_Agency) වෙත යැවිය නොහැක.
+    
+- විවිධ ටැබ් / කවුළු සාමාන්‍යයෙන් එකිනෙකා ගැන නොදනී. සමහර විට ඒවා සිදු වේ, උදාහරණයක් ලෙස එක් කවුළුවක් අනෙක් කවුළුව විවෘත කිරීමට JavaScript භාවිතා කරන විට. නමුත් මෙම අවස්ථාවෙහිදී පවා, එක් පිටුවක ඇති JavaScript විවිධ වෙබ් අඩවි වලින් (වෙනත් domain එකක්, protocol එකක්  හෝ port එකක් හරහා) පැමිණෙන්නේ නම් අනෙක් පිටුවට පිවිසිය නොහැක.
+
+    මෙය "Same Origin Policy" ලෙස හැඳින්වේ. එසේ  වැඩ කිරීමට, පිටු දෙකම දත්ත හුවමාරුව සඳහා එකඟ විය යුතු අතර එය හසුරුවන විශේෂ JavaScript  කේතයක් අඩංගු විය යුතුය. අපි එය නිබන්ධනයෙන් ආවරණය කරමු.
+    
+    මෙම සීමාව නැවතත්, පරිශීලකයාගේ ආරක්ෂාව සඳහා වේ. පරිශීලකයෙකු විවෘත කර ඇති http://anysite.com හි පිටුවකට http://gmail.com URL සමඟ වෙනත් බ්‍රව්සර්ටැබ් එකකට ප්‍රවේශ විය නොහැකි අතර එතැන් සිට තොරතුරු සොරකම් කළ නොහැකි විය යුතුය.
+
+ - JavaScript වැඩසටහනට වර්තමාන පිටුව පැමිණි සේවාදායකයට  පහසුවෙන් ජාලය හරහා සන්නිවේදනය කළ හැකිය. නමුත් වෙනත් අඩවි / වසම් වලින් දත්ත ලබා ගැනීමේ   හැකියාව අඩපණ වී ඇත. හැකි වුවද, දුරස්ථ පැත්තෙන් පැහැදිලි එකඟතාවයක්   (HTTP Headers  වලින් ප්‍රකාශිත) අවශ්‍ය වේ. නැවත වරක්, එය ආරක්ෂිත  සීමාවකි.
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+JavaScript බ්‍රව්සරයෙන් පිටත භාවිතා කරන්නේ නම්  උදාහරණයක් ලෙස සේවාදායකයක එවැනි සීමාවන් නොපවතී. නවීන බ්‍රව්සර් මඟින් plugin/extensions සඳහා ඉඩ ලබා දේ.
 
-## What makes JavaScript unique?
+## JavaScript වල අද්විතීය වන්නේ කුමක් ද?
 
-There are at least *three* great things about JavaScript:
+JavaScript ගැන අවම වශයෙන් විශිෂ්ට කරුණු තුනක් වත් තිබේ:
 
-```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Support by all major browsers and enabled by default.
-```
-JavaScript is the only browser technology that combines these three things.
+    + HTML / CSS සමඟ පූර්ණ එකතු කල හකිවීම.
+    + සරල දේවල් සරලව සිදුකිරිම 
+    + සියලුම ප්‍රධාන බ්‍රව්සර් මගින් ක්‍රියාකළ හකිවීම සහ by default  සක්‍රීය කර තිබීම.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
+මෙම කරුණු තුන ඒකාබද්ධ කරන එකම බ්‍රව්සර් තාක්ෂණයJavaScript ය.
 
-That said, JavaScript also allows to create servers, mobile applications, etc.
+JavaScript අද්විතීය වන්නේඑමනිසයි. බ්‍රව්සර් අතුරුමුහුණත් නිර්මාණය කිරීම සඳහා එය වඩාත්ම  පුළුල් මෙවලම වන්නේ එබැවිනි.
 
-## Languages "over" JavaScript
+JavaScript මඟින් සේවාදායකයන්, ජංගම යෙදුම් ආදිය නිර්මාණය කිරීමටද ඉඩ ලබා දේ.
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+## JavaScript හා අනෙකුත් භාෂා
 
-That's to be expected, because projects and requirements are different for everyone.
+JavaScript හි syntax  සෑම කෙනෙකුගේම අවශ්‍යතාවන්ට ගැලපෙන්නේ නැත. විවිධ පුද්ගලයින්ට විවිධfeatures  අවශ්‍ය වේ.
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+ව්‍යාපෘති සහ අවශ්‍යතා සෑම කෙනෙකුටම වෙනස් වන නිසා එය අපේක්ෂා කළ යුතුය.
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
+මෑතකදී බ්‍රව්සරයේ ක්‍රියාත්මක වීමට පෙරJavaScript  වෙත transpile කරන ලද (පරිවර්තනය කරන ලද) නව භාෂාවන් රාශියක් ඉදිරිපත් විය.
 
-Examples of such languages:
+නවීන මෙවලම් මගින් traspilation  ඉතා වේගවත් හා විනිවිද පෙනෙන බවකට  පත් කරයි, ඇත්ත වශයෙන්ම සංවර්ධකයින්ට වෙනත් භාෂාවකින් කේත කිරීමට ඉඩ දී එය ස්වයංක්‍රීයව පරිවර්තනය කරයි.
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+එවැනි භාෂාවල උදාහරණ:
 
-There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
+ - CoffeeScript  යනු JavaScript සඳහා “Syntactic sugar ” එකකි. එය කෙටි වාක්‍ය ඛණ්ඩයක් හඳුන්වා දෙන අතර වඩාත් පැහැදිලි හා වඩාත් නිවැරදි කේත ලිවීමට අපට ඉඩ සලසයි. සාමාන්යයෙන් Ruby සන්වර්ධකයින්  එයට ප්‍රිය කරයි.
+ 
+ - TypeScript  සංකේන්ද්‍රණය වී ඇත්තේ සංකීර්ණ පද්ධතිවල development සහsupport සරල කිරීම සඳහා “strict data typing” එකතු කිරීම මත ය. එය සංවර්ධනය කර ඇත්තේ Microsoft  විසිනි.
+ 
+ - Flow ද data typing  වෙනත් ආකාරයකින් එක් කරයි. Facebook විසින්  සංවර්ධනය කරන ලදි.
+ 
+ - Dart යනු බ්‍රව්සර් නොවන environment එකක  (ජංගම යෙදුම් වැනි) ධාවනය වන තමන්ගේම එන්ජිමක් ඇති ස්වාධීන භාෂාවක් වන අතර එය JavaScript වෙත transpile කළ හැකිය. Google විසින් සංවර්ධනය කරන ලදි.
 
-## Summary
+තවත් බොහෝ දේ ඇත. ඇත්ත වශයෙන්ම, transpile කළ භාෂාවක් භාවිතා කළද, අප කරන්නේ කුමක්ද යන්න සැබවින්ම තේරුම් ගැනීමටනම් JavaScript  දැන සිටිය යුතුය.
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+## සාරාංශය
+
+ - JavaScript මුලින් බ්රවුසරයට පමණක් සීමා වූ භාෂාවක් ලෙස නිර්මාණය කරන ලද නමුත් දැන් එය වෙනත් බොහෝ environment වලද භාවිතා වේ.
+ 
+ - අද, JavaScript  HTML / CSS සමඟ පූර්ණ ලෙස ඒකාබද්ධ වී වඩාත් පුළුල් ලෙස භාවිතා කරන බ්‍රව්සර් භාෂාව ලෙස සුවිශේෂී ස්ථානයක් ලබා ඇත.
+ 
+ - JavaScript  වෙත "transpile" වන සහ සමහර විශේෂාංග සපයන බොහෝ භාෂා ඇත. JavaScript ප්‍රගුණ කිරීමෙන් පසු අවම වශයෙන් කෙටියෙන් හෝ ඒවා හැදෑරීම කල යතුයි.
