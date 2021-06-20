@@ -1,42 +1,40 @@
 
-# Manuals and specifications
+# අත්පොත් සහ නියමාවලි.
 
-This book is a *tutorial*. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other sources.
+මෙම පොත *නිබන්ධනයක්* පමණි. මෙහි අරමුණ වන්නේ ඔබට ජාවාස්ක්‍රිප්ට් හුරු කිරීමයි. මූලික කරණු ඉගෙනීමෙන් පසු ඔබට වඩා විස්තරාත්මක මූලාශ්‍ර ඇසුරුකිරීමට හැකි වනු ඇත.
 
-## Specification
+## නියමාවලි (Specifications)
 
-[The ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+ජාවාස්ක්‍රිප්ට් වඩාත් ගැඹුරට, විස්තරාත්මකව මෙන්ම විධිමත්ව අර්ථදක්වන මූලාශ්‍රය වන්නේ [ECMA-262 නියමාවලිය](https://www.ecma-international.org/publications/standards/Ecma-262.htm) යි. ජාවාස්ක්‍රිප්ට් පිලිබඳ වඩාත්ම නිවැරදි මූලාශ්‍රය වන්නේ මෙයයි.
 
-But being that formalized, it's difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place. But it's not for everyday use.
+මෙහි ඇති විධිමත් භාවය හේතුවෙන් මෙය තේරුම් ගැනීම තරමක් වෙහෙසකර කටයුත්තක් විය හැකිය. එමනිසා ජාවාස්ක්‍රිප්ට් පිලිබඳ ගැටලුවක් නිරාකරණය කරගැනීමේදි පරිශීලනය කළ හැකි වඩාත්ම විශ්වාසවන්ත මූලාශ්‍ර වූවත් මෙය එදිනෙදා භාවිතයට එතරම් සුදුසු නොවනු ඇත.
 
-A new specification version is released every year. In-between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+සෑම වසරකම මෙම නියමාවලියේ නව සංස්කරණයක් නිකුත් වේ. එවැනි නිල නිකුත් කිරීමක් ප්‍රකාශයට පත්කිරීමට පෙර එහි නවතම කෙටුම්පත (draft), <https://tc39.es/ecma262/> තුලින් ලබාගත හැකිය.
 
-To read about new bleeding-edge features, including those that are "almost standard" (so-called "stage 3"), see proposals at <https://github.com/tc39/proposals>.
+<https://github.com/tc39/proposals> යන පිටුවෙන් අපට ජාවාස්ක්‍රිප්ට් හි නවතම විශේෂාංග් සහ "stage-3" ලෙස හැඳින්වෙන ඊලඟ නියමාවලියට එකතු වීමට නියමිත විශේෂාංග පිලිබඳව කියවිය හැකිය.
 
-Also, if you're in developing for the browser, then there are other specs covered in the [second part](info:browser-environment) of the tutorial.
+එසේම, ඔබ වෙබ් බ්‍රව්සරයක් නිර්මාණය කරන්නේ නම්, ඊට අදාල නියමාවලි මෙම නිබන්ධනයේ [දෙවෙනි කොටසින්](info:browser-environment) සාකච්ඡා කෙරෙනු ඇත.
 
-## Manuals
+## අත්පොත් (Manuals)
 
-- **MDN (Mozilla) JavaScript Reference** is a manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+- **MDN (Mozilla) ජාවාස්ක්‍රිප්ට් නිර්දේශය** බොහෝ උදාහරණ සහ විස්තර ඇතුලත් අත්පොතකි. එක් එක් ජාවාස්ක්‍රිප්ට් ශ්‍රිත සහ API පිලිබඳ සවිස්තරාත්මක දැනුම මෙහි අඩංගු වේ.
 
-    One can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+    <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> යන ලිපිනයෙන් මෙය කියවිය හැකිය.
 
-    Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+    මෙය බොහෝ ප්‍රසිද්ධ මූලාශ්‍රයක් බැවින් "MDN [සෙවුම]" ලෙස ගූගල් පිරික්සීමෙන්ද පහසුවෙන් තොරතුරු ලබා ගත හැකිය. උදාහරණයක් ලෙස `parseInt` නම් ශ්‍රිතය පිලිබඳ MDN පිටුව ලබා ගැනීමට ["MDN parseInt"](https://google.com/search?q=MDN+parseInt) ලෙස පිරික්සීම ප්‍රමාණවත් වනු ඇත.
 
+- **MSDN** – ජාවාස්ක්‍රිප්ට් සඳහා වූ මයික්‍රොසොෆ්ට් අත්පොත. ඉන්ටර්නෙට් එක්ස්ප්ලොරර් සම්බන්ධව යම්කිසිවක් සොයා බැලීමට අවශ්‍ය නම් <http://msdn.microsoft.com/> තුලින් මෙයට පිවිසිය හැකිය.
 
-- **MSDN** – Microsoft manual with a lot of information, including JavaScript (often referred to as JScript). If one needs something specific to Internet Explorer, better go there: <http://msdn.microsoft.com/>.
+    "RegExp MSDN" හෝ "RegExp MSDN jscript" ගූගල් පිරික්සීමෙන්ද MSDN හි දැක්වෙන විස්තර කියවිය හැකිය.
 
-    Also, we can use an internet search with phrases such as "RegExp MSDN" or "RegExp MSDN jscript".
+## අනුකූලතා (Compatibility) වගු
 
-## Compatibility tables
+ජාවාස්ක්‍රිප්ට් නිතර අලුත් වන භාෂාවකි. නිරතුරුවම අලුත් විශේෂාංග භාෂාවට එකතු වෙමින් (සහ ඉවත් වෙමින්) ඉදිරියට යයි.
 
-JavaScript is a developing language, new features get added regularly.
+නොයෙක් බ්‍රවුසර් සහ ජාවාස්ක්‍රිප්ට් එන්ජින් විවිධ මට්ටමින් මේ නව විශේෂාංග වලට සහය දක්වන බැවින් සෑම විටම මෙම විශේෂාංග එකම ආකාරයෙන් භාවිතා කල නොහැක.
+එමනිසා ඒ ඒ බ්‍රවුසර් සහ එන්ජින් කිනම් මට්ටමින් ඒ ඒ විශේෂාංගයන්ට සහ දක්වනවාද යන්න දැනගැනීමට පහත සේවාවන් භාවිතා කල හැකිය.
 
-To see their support among browser-based and other engines, see:
+- <http://caniuse.com> 
+- <https://kangax.github.io/compat-table> 
 
-- <http://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
-- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
-
-All these resources are useful in real-life development, as they contain valuable information about language details, their support etc.
-
-Please remember them (or this page) for the cases when you need in-depth information about a particular feature.
+ඉහත දැක්වූ සියලු මූලාශ්‍ර ජාවාස්ක්‍රිප්ට් ක්‍රමලේඛනයේදී ඉතා ප්‍රයෝජනවත වෙයි. එබැවින් ඒවා නිතර නිතර පරිශීලනයෙන් ඔබට වඩා පලපුරුදු ජාවාස්ක්‍රිප්ට් ක්‍රමලේඛකයෙකු විය හැකිය.
